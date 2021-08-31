@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 namespace WebAppExampleRefit.Models
 {
-    public interface IZipCodeAsync
+    public interface IZipCode
     {
         [Get("/ws/{value}/json")]
-        Task<ZipCode> GetZipAsync(string value);
+        Task<ZipCode> GetAsync(string value);
     }
 }

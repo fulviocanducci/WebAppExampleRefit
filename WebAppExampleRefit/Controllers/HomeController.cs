@@ -32,9 +32,9 @@ namespace WebAppExampleRefit.Controllers
         }
 
         [HttpGet("/zipcode/{value}")]
-        public async Task<IActionResult> GetZipCodeAsync([FromServices] IZipCodeAsync zipCodeAsync, string value)
+        public async Task<IActionResult> GetZipCodeAsync([FromServices] IZipCode zipCode, string value)
         {
-            var result = await zipCodeAsync.GetZipAsync(value);
+            var result = await zipCode.GetAsync(value);
             return View("GetZipCodeAsync", result);
         }
     }

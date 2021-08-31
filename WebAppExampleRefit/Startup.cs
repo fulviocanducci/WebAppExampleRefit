@@ -19,7 +19,7 @@ namespace WebAppExampleRefit
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRefitClient<IZipCodeAsync>().ConfigureHttpClient(config =>
+            services.AddRefitClient<IZipCode>().ConfigureHttpClient(config =>
             {
                 config.BaseAddress = new Uri("https://viacep.com.br");
             });
